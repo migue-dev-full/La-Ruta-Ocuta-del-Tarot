@@ -227,3 +227,38 @@ body {
     }
 
 }
+
+#section-img{
+    margin: 0 auto;
+    justify-content: center;
+    right: 0;
+    left: 0;
+    border-radius: 0.5rem 0.5rem 0;
+}
+
+#img{
+    margin: 0 auto;
+    justify-content: center;
+    right: 0;
+    left: 0;
+    border: 3px rgb(122, 4, 122) solid;
+    width: 1520px;
+    border-radius: 1rem ;
+    padding: 0.5rem;
+
+}
+
+#tarot-img{
+    display: flex;
+    width: 1500px;
+    height: 1000px;
+    margin: auto;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    object-fit: cover;
+    border: 3px rgb(49, 8, 231) solid;
+    border-radius: 0.5rem 0.5rem 0;
+    overflow:hidden;
+}

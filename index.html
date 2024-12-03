@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>La Ruta Oculta Del Tarot</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 </head>
 <body>
 
     <!-- Nav bar -->
 
     <nav id="nav-bar">
-        <div id="nav-content">
+        <div id ="nav-content">
+            <button id="menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="nav-menu-btn">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>                  
+            </button>
             <h1 class="nav-item">Consultas</h1>
             <h1 class="nav-item">Tienda esoterica</h1>
             <h1 class="nav-item">Comunidad</h1>
@@ -40,5 +46,47 @@
         </div>
       </section>
     
+
+      <!-- Seccion Carrusel -->
+
+      <div class="swiper mySwiper container">
+
+        <div class="swiper-slide">
+            <div class="swiper-txt">
+                <h3>lorem ipsum</h3>
+            </div>
+            <img src="imagen-1.jpg" alt="">
+        
+            <div class="swiper-txt">
+                <h3>lorem ipsum</h3>
+            </div>
+            <img src="imagen-2.jpg" alt="">
+            
+            <div class="swiper-txt">
+                <h3>lorem ipsum</h3>
+            </div>
+            <img src="imagen-1.jpg" alt="">
+        </div>
+
+        <div class="swiper-slide">
+            <div class="swiper-txt">
+                <h3>lorem ipsum</h3>
+            </div>
+            <img src="imagen-2.jpg" alt="">
+        </div>
+
+        <div class="swiper-slide">
+            <div class="swiper-txt">
+                <h3>lorem ipsum</h3>
+            </div>
+            <img src="imagen-1.jpg" alt="">
+        </div>
+      </div>
+
+
+
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+      <script src="script.js"></script>
 </body>
 </html>

@@ -117,10 +117,12 @@ body {
 
 #hero {
     height: calc(10rem + 4rem);
-    background: linear-gradient(rgb(49, 3, 80), #6e0b48, rgb(61, 1, 1));
+    background: linear-gradient(rgb(39, 39, 39), #410266, rgb(39 , 39, 39));
     background-position: center;
     background-size: cover;
     padding: 0 1rem;
+    margin-bottom: 1rem;
+
 }
 
 #hero-content {
@@ -247,6 +249,8 @@ body {
     margin: auto;
     position: relative;
     overflow: hidden;
+    border-radius: 15px;
+    border: 1px white solid;
 }
 
 .list {

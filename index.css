@@ -117,11 +117,11 @@ body {
 
 #hero {
     height: calc(10rem + 4rem);
-    background: linear-gradient(rgb(39, 39, 39), #410266, rgb(39 , 39, 39));
+    background: linear-gradient(rgb(0, 1, 51), #410266, rgb(20, 2, 87));
     background-position: center;
     background-size: cover;
     padding: 0 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
 }
 
@@ -205,7 +205,9 @@ body {
         justify-content: space-evenly;
     }
 
-
+    #hero-subtitle{
+        font-size:  large;
+    }
 
 #section-img{
     margin: 0 auto;
@@ -251,6 +253,8 @@ body {
     overflow: hidden;
     border-radius: 15px;
     border: 1px white solid;
+    box-shadow: 0 25px 50px -12px rgb(54, 1, 177);
+
 }
 
 .list {

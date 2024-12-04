@@ -1,6 +1,6 @@
 let list = document.querySelector('.slider .list');
-let items = document.querySelector('.slider .list .item');
-let dots = document.querySelector('.slider .dots li');
+let items = list.querySelectorAll('.slider .list .item');
+let dots = document.querySelectorAll('.slider .dots li');
 let prev = document.getElementById('prev');
 let next = document.getElementById('next');
 
@@ -8,41 +8,29 @@ let active = 0;
 let lengthItems = items.length - 1;
 
 
-next.onclick = function(){
-    if (active + 1 > lengthItems){
-        actuve = 0;
-    }else{
-        active = active + 1;
-    }
+next.onclick = function() {
+    active = (active + 1) % lengthItems; // Wrap around using modulo
     reloadSlider();
-}
-
-prev.onclick = function(){
-    if (active - 1 < 0){
-        active = lengthItems;
-    }else{
-        active = active - 1;
-    }
+  };
+  
+  prev.onclick = function() {
+    active = (active - 1 + lengthItems) % lengthItems; // Wrap around using modulo
     reloadSlider();
-}
+  };
 
-function reloadSlider(){
-    let checkLeft = items[active].offsetLeft;
-    list.style.left + -checkLeft + 'px';
-
-    let lastActiveDot = document.querySelector('.slide .dots li.active');
-    lastActiveDot.classList.remove('active');
-    dots[active].classList.add('active');
-    clearInterval(reloadSlider);
-    refreshSlider = setInterval(()=> {next.click()}, 3000);
-}
-
-dots.forEach(li, key) => {
-    li.addEventListener('click', function(){
-    active = key;
-    reloadSlider();
-})
-
+  function reloadSlider() {
+    list.style.left = -items[active].offsetLeft + 'px';
+  
+    dots.forEach(dot => dot.classList.remove('active')); // Remove active class from all dots
+    dots[active].classList.add('active'); // Add active class to current dot
+  }
+  
+  dots.forEach((li, key) => { // Use index for clarity
+    li.addEventListener('click', () => {
+      active = key;
+      reloadSlider();
+    });
+  });
+  
 console.log(next);
 
-}
